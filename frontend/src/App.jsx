@@ -18,7 +18,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('/api/portfolio-data');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/portfolio-data`)
         setPortfolioData(response.data);
         setLoading(false);
       } catch (err) {
